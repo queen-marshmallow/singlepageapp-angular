@@ -19,25 +19,32 @@
         </div>
 
         <div class="row">
-            <div class="col-md-6 form-group">
+            <div class="col-md-12 form-group">
                 <label for="role">Role</label>
                 <br />
                 <select class="form-control" ng-model="selectedRole" ng-options="role.Name for role in roles" name="role" id="role">
                     <option value="">Select a Role</option>
                 </select>
             </div>
-            <div class="col-md-6 form-group">
+            <div class="col-md-12 form-group">
                 <label for="organization">Organization</label>
                 <br />
                 <select class="form-control" ng-model="selectedOrganization" ng-options="organization.Name for organization in organizations" name="organization" id="organization">
                     <option value="">Select an Organization</option>
                 </select>
             </div>
-            <div class="col-md-6 form-group">
-                <label for="location">Location</label>
+        </div>
+        <div class="row">
+            <div class="col-md-12 form-group">
+                <label for="city">City</label>
                 <br />
-                <select class="form-control" ng-model="selectedLocation" ng-options="location.Name for location in locations" name="location" id="location">
-                    <option value="">Select a Location</option>
+                <input type="text" class="form-control" ng-model="city" id="city" />
+            </div>
+            <div class="col-md-12 form-group">
+                <label for="state">State</label>
+                <br />
+                <select class="form-control" ng-model="selectedState" ng-options="state for state in states" name="state" id="state">
+                    <option value="">Select a State</option>
                 </select>
             </div>
         </div>

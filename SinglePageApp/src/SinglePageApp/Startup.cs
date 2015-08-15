@@ -32,7 +32,7 @@ namespace SinglePageApp
         // Configure is called after ConfigureServices is called.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
-            Database.SetInitializer(new DropCreateDatabaseIfModelChanges<AppDataContext>());
+            Database.SetInitializer(new AppDataInitializer());
             // Add static files to the request pipeline.
             app.UseStaticFiles();
             app.UseMvc();

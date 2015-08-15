@@ -25,7 +25,8 @@
         }
 
         return {
-            getAllJobs: _getAllJobs
+            getAllJobs: _getAllJobs,
+            createJob: _createJob
         }
     };
 

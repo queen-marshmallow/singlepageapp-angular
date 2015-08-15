@@ -17,7 +17,13 @@ namespace SinglePageApp.Data.Models
         public string Description { get; set; }
 
         [Required]
-        public virtual Location Location { get; set; }
+        [StringLength(100)]
+        public string City { get; set; }
+
+        [Required]
+        [StringLength(100)]
+        public string State { get; set; }
+
         [Required]
         public virtual Organization Organization { get; set; }
         [Required]

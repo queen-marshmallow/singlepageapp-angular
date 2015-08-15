@@ -10,7 +10,6 @@ namespace SinglePageApp.Data
     public class AppDataContext : DbContext
     {
         public virtual DbSet<Job> Jobs { get; set; }
-        public virtual DbSet<Location> Locations { get; set; }
         public virtual DbSet<Permission> Permissions { get; set; }
         public virtual DbSet<PositionType> PositionTypes { get; set; }
         public virtual DbSet<Role> Roles { get; set; }
