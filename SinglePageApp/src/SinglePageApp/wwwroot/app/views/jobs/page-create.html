@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <form id="jobCreateForm">
+        <div>
+            <h1>Create Job</h1>
+        </div>
+        <hr />
+        <div class="row">
+            <div class="col-md-18 form-group">
+                <label for="description">Description</label>
+                <br />
+                <textarea class="large-textarea form-control" ng-model="description" id="description" name="description"></textarea>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6 form-group">
+                <label for="role">Role</label>
+                <br />
+                <select class="form-control" ng-model="selectedRole" ng-options="role.Name for role in roles" name="role" id="role">
+                    <option value="">Select a Role</option>
+                </select>
+            </div>
+            <div class="col-md-6 form-group">
+                <label for="organization">Organization</label>
+                <br />
+                <select class="form-control" ng-model="selectedOrganization" ng-options="organization.Name for organization in organizations" name="organization" id="organization">
+                    <option value="">Select an Organization</option>
+                </select>
+            </div>
+            <div class="col-md-6 form-group">
+                <label for="location">Location</label>
+                <br />
+                <select class="form-control" ng-model="selectedLocation" ng-options="location.Name for location in locations" name="location" id="location">
+                    <option value="">Select a Location</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="text-right">
+            <button class="btn btn-primary" id="submitForm" ng-click="submit()">Submit</button>
+        </div>
+    </form>
+</body>
+</html>
