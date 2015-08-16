@@ -45,7 +45,7 @@ label {
     font-weight: normal;
 }
 
-.large-textarea {
-    max-width: 100% !important;
-    height: 250px !important;
+textarea.large-textarea {
+    max-width: 82%;
+    height: 200px;
 }

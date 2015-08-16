@@ -8,6 +8,10 @@
             .when('/jobs/create', {
                 templateUrl: '/app/views/jobs/page-create.html',
                 controller: 'jobCreateController'
+            })
+            .when('/jobs/list', {
+                templateUrl: '/app/views/jobs/page-list.html',
+                controller: 'jobListController'
             });
     }
 

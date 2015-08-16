@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Data.Entity;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Mvc;
 using SinglePageApp.Data.Models;
@@ -20,14 +21,14 @@ namespace SinglePageApp.Controllers
         }
         // GET: api/values
         [HttpGet]
-        public IEnumerable<Job> Get()
+        public Task<List<Job>> Get()
         {
-            return _context.Set<Job>().ToList();
+            return _context.Set<Job>().ToListAsync();
         }
 
         // POST api/values
         [HttpPost]
-        public void Post([FromBody]Job value)
+        public async Task Post([FromBody]Job value)
         {
             //TODO: fill in manager details from claims...
             var user = _context.Set<User>().FirstOrDefault(t => t.UserPrincipalName == "mafletch@microsoft.com");
@@ -42,6 +43,7 @@ namespace SinglePageApp.Controllers
             value.CreatedBy = user;
             value.CreatedOn = DateTime.UtcNow;
             _context.Set<Job>().Add(value);
+            await _context.SaveChangesAsync();
         }
     }
 }

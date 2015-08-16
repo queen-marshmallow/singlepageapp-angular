@@ -27,7 +27,7 @@ namespace SinglePageApp.Data.Models
         [Required]
         public virtual Organization Organization { get; set; }
         [Required]
-        public virtual PositionType Positiontype { get; set; }
+        public virtual PositionType PositionType { get; set; }
 
         [Required]
         public virtual User CreatedBy { get; set; }
