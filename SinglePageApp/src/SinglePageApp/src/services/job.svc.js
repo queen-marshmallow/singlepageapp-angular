@@ -1,6 +1,6 @@
-﻿define([], function () {
-    function jobsDataService($resource, $q) {
-        function _getAllJobs() {
+﻿ngm('app').factory('jobSvc', ['$resource', '$q', function($resource, $q) {
+    return {
+        getAllJobs: function () {
             var defer = $q.defer();
 
             $resource('api/jobs/').query({}, null, function (data) {
@@ -9,9 +9,8 @@
                 defer.reject(error);
             });
             return defer.promise;
-        }
-
-        function _createJob(job) {
+        },
+        createJob: function(job) {
             var defer = $q.defer();
 
             $resource('api/jobs/').save({}, job,
@@ -23,14 +22,5 @@
                 });
             return defer.promise;
         }
-
-        return {
-            getAllJobs: _getAllJobs,
-            createJob: _createJob
-        }
-    };
-
-    jobsDataService.$inject = ['$resource', '$q'];
-
-    return jobsDataService;
-});
+    }
+}]);

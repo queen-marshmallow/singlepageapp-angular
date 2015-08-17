@@ -5,7 +5,16 @@
     <title></title>
 </head>
 <body>
-    <div class="table-responsive">
+    <spinner name="jobListSpinner">
+        <div class="center progress-ring progress-large">
+            <div class="progress-circle"></div>
+            <div class="progress-circle"></div>
+            <div class="progress-circle"></div>
+            <div class="progress-circle"></div>
+            <div class="progress-circle"></div>
+        </div>
+    </spinner>
+    <div class="table-responsive" ng-init="initialize()" ng-show="isLoaded">
         <table class="table table-striped">
             <thead>
                 <tr>

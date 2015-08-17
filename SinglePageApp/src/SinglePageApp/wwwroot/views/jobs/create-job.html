@@ -5,7 +5,16 @@
     <title></title>
 </head>
 <body>
-    <form id="jobCreateForm">
+    <spinner name="jobCreateSpinner">
+        <div class="center progress-ring progress-large">
+            <div class="progress-circle"></div>
+            <div class="progress-circle"></div>
+            <div class="progress-circle"></div>
+            <div class="progress-circle"></div>
+            <div class="progress-circle"></div>
+        </div>
+    </spinner>
+    <form id="jobCreateForm" ng-init="initialize()" ng-show="isLoaded">
         <div>
             <h1>Create Job</h1>
         </div>
