@@ -1,7 +1,6 @@
-﻿ngm('app').controller('createJobCtrl', ['$scope', '$q', 'jobSvc', 'staticDataSvc', 'spinnerService', function ($scope, $q, jobSvc, staticDataSvc, spinnerService) {
+﻿ngm('app').controller('createJobCtrl', ['$scope', '$q', 'jobSvc', 'staticDataSvc', function ($scope, $q, jobSvc, staticDataSvc) {
     $scope.initialize = function () {
         $scope.isLoaded = false;
-        spinnerService.show('jobCreateSpinner');
 
         var orgRequest = staticDataSvc.getOrganizations();
         orgRequest.then(function (orgs) {
@@ -14,7 +13,6 @@
         });
 
         $q.all([orgRequest, roleRequest]).finally(function () {
-            spinnerService.hide('jobCreateSpinner');
             $scope.isLoaded = true;
         });
 

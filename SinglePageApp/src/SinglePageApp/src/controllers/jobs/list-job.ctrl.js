@@ -1,12 +1,11 @@
 ﻿
-ngm('app').controller('listJobCtrl', ['$scope', 'jobSvc', 'spinnerService', function ($scope, jobSvc, spinnerService) {
-    $scope.initialize = function () {
-        spinnerService.show('jobListSpinner');
-        
+ngm('app').controller('listJobCtrl', ['$scope', 'jobSvc', function ($scope, jobSvc) {
+    
+
+    $scope.initialize = function () {        
         jobSvc.getAllJobs().then(function (jobs) {
             $scope.jobs = jobs;
         }).finally(function () {
-            spinnerService.hide('jobListSpinner');
             $scope.isLoaded = true;
         });
     }

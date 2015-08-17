@@ -4,6 +4,7 @@
 /// <reference path="../src/controllers/jobs/create-job.ctrl.js" />
 /// <reference path="../src/controllers/jobs/list-job.ctrl.js" />
 /// <reference path="../src/controllers/landing.ctrl.js" />
+/// <reference path="../src/controllers/layout/layoutctrl.js" />
 /// <reference path="../src/module.js" />
 /// <reference path="../src/services/cache.svc.js" />
 /// <reference path="../src/services/job.svc.js" />
