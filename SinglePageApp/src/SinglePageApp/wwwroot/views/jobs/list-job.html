@@ -14,7 +14,34 @@
             <div class="progress-circle"></div>
         </div>
     </spinner>
-    <div class="table-responsive" ng-init="initialize()" ng-show="isLoaded">
+    <ol class="list-items" ng-init="initialize()" ng-show="isLoaded">
+        <li class="list-items-row" ng-repeat="(org, group) in groupedJobs">
+            <div data-toggle="collapse" aria-expanded="false" data-target="#org{{$index}}">
+                <div class="row">
+                    <div class="col-md-2">
+                        <i class="icon-add"></i>
+                        <i class="icon-remove"></i>
+                    </div>
+                    <div class="col-md-6">
+                        {{org}}
+                    </div>
+                </div>
+            </div>
+            <div class="collapse" id="org{{$index}}">
+                <ol class="list-items">
+                    <li class="list-items-row" ng-repeat="job in group">
+                        <div class="row">
+                            <div class="col-md-2">{{job.ID}}</div>
+                            <div class="col-md-4">{{job.PositionType.Name}}</div>
+                            <div class="col-md-8">{{job.Description}}</div>
+                        </div>
+
+                    </li>
+                </ol>
+            </div>
+        </li>
+    </ol>
+    <!--<div class="table-responsive" ng-init="initialize()" ng-show="isLoaded">
         <table class="table table-striped">
             <thead>
                 <tr>
@@ -33,6 +60,6 @@
                 </tr>
             </tbody>
         </table>
-    </div>
+    </div>-->
 </body>
 </html>
