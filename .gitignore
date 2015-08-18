@@ -1,0 +1,12 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/SinglePageApp/src/SinglePageApp/node_modules
+/SinglePageApp/src/SinglePageApp/wwwroot/bin
+/SinglePageApp/src/SinglePageApp/wwwroot/lib
+/SinglePageApp/src/SinglePageApp/wwwroot/bower_components
+/SinglePageApp/src/SinglePageApp/sass/winstrap
+/SinglePageApp/src/SinglePageApp/wwwroot/css/fonts
+/SinglePageApp/src/SinglePageApp/wwwroot/css/winstrap.css
+/SinglePageApp/src/SinglePageApp/wwwroot/css/main.css

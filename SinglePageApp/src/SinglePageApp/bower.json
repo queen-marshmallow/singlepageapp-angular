@@ -1,0 +1,13 @@
+{
+  "name": "ASP.NET",
+  "private": true,
+  "dependencies": {
+    "angular-route": "1.4.3",
+    "angular-resource": "1.4.4",
+    "winstrap": "0.4.4",
+    "angular-spinners": "2.1.8"
+  },
+  "resolutions": {
+    "angular": "1.4.4"
+  }
+}

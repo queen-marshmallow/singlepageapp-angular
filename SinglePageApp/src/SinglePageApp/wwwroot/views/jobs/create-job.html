@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <spinner register="false" show="!isLoaded">
+        <div class="center progress-ring progress-large">
+            <div class="progress-circle"></div>
+            <div class="progress-circle"></div>
+            <div class="progress-circle"></div>
+            <div class="progress-circle"></div>
+            <div class="progress-circle"></div>
+        </div>
+    </spinner>
+    <form id="jobCreateForm" ng-init="initialize()" ng-show="isLoaded">
+        <div>
+            <h2>Create Job</h2>
+        </div>
+        <hr />
+        <div class="row">
+            <div class="col-md-24 form-group">
+                <label for="description">Description</label>
+                <br />
+                <textarea cols="6" class="large-textarea form-control" ng-model="description" id="description" name="description"></textarea>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12 form-group">
+                <label for="role">Role</label>
+                <br />
+                <select class="form-control" ng-model="selectedRole" ng-options="role.Name for role in roles" name="role" id="role">
+                    <option value="">Select a Role</option>
+                </select>
+            </div>
+            <div class="col-md-12 form-group">
+                <label for="organization">Organization</label>
+                <br />
+                <select class="form-control" ng-model="selectedOrganization" ng-options="organization.Name for organization in organizations" name="organization" id="organization">
+                    <option value="">Select an Organization</option>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 form-group">
+                <label for="city">City</label>
+                <br />
+                <input type="text" class="form-control" ng-model="city" id="city" />
+            </div>
+            <div class="col-md-12 form-group">
+                <label for="state">State</label>
+                <br />
+                <select class="form-control" ng-model="selectedState" ng-options="state for state in states" name="state" id="state">
+                    <option value="">Select a State</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="text-right">
+            <button class="btn btn-primary" id="submitForm" ng-click="submit()">Submit</button>
+        </div>
+    </form>
+</body>
+</html>
