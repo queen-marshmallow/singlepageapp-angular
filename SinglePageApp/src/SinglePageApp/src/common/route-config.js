@@ -2,7 +2,7 @@
 ngm('app').config(['$routeProvider', function ($routeProvider) {
     $routeProvider
            .when('/', {
-               templateUrl: '/views/landing.html',
+               templateUrl: '/views/manager/dashboard.html',
                controller: 'landingCtrl'
            })
            .when('/jobs/create', {
@@ -12,5 +12,8 @@ ngm('app').config(['$routeProvider', function ($routeProvider) {
            .when('/jobs/list', {
                templateUrl: '/views/jobs/list-job.html',
                controller: 'listJobCtrl'
+           })
+           .when('/manager/dashboard', {
+               templateUrl: '/views/manager/dashboard.html'
            });
 }]);

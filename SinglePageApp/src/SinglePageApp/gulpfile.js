@@ -26,7 +26,7 @@ paths.minCss = paths.webroot + "css/**/*.min.css";
 var bower = [
     paths.bower + "angular-resource/angular-resource.js",
     paths.bower + "angular-route/angular-route.js",
-    paths.bower + "boostrap-sass/assets/javascripts/*.js",
+    paths.bower + "bootstrap-sass/assets/javascripts/*.js",
     paths.bower + "winstrap/src/js/app.js",
     paths.bower + "angular-spinners/dist/angular-spinners.js"
 ];
